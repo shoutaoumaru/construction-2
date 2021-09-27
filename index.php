@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>建設テンプレート2</title>
-<meta name="description"  content="">
-<meta name="robots" content="noindex,nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
-<link rel="stylesheet" type="text/css" href="/styles/animation.css">
-<link rel="stylesheet" type="text/css" href="/styles/parts.css">
-<link rel="stylesheet" type="text/css" href="/styles/style.css">
+<?php get_header(); ?>
 </head>
 <body>
 
   <header id="header" class="d-flex">
     <h2>
       <a href="/">
-        <img class="logo" src="/images/logo.svg" alt="" width="85%">
+        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="" width="85%">
       </a>
     </h2>
     <nav id="pc-nav" class="">
@@ -138,7 +126,7 @@
       <li class="col-lg col-md-6 p-0 bgextend bgLRextendTrigger zoomInRotate bgLRextend">
         <div class="bgappearTrigger bgappear position-relative">
           <a href="/">
-            <img class="img-fluid" src="/images/business/business-1.jpg" alt="">
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-1.jpg" alt="">
           </a>
           <p class="position-absolute fs-5">鉄骨工事</p>
         </div>
@@ -146,7 +134,7 @@
       <li class="col-lg col-md-6 p-0 bgextend bgLRextendTrigger zoomInRotate bgLRextend">
         <div class="bgappearTrigger bgappear position-relative">
           <a href="/">
-            <img class="img-fluid" src="/images/business/business-2.jpg" alt="">
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-2.jpg" alt="">
           </a>
           <p class="position-absolute fs-5">給水工事</p>
         </div>
@@ -154,7 +142,7 @@
       <li class="col-lg col-md-6 p-0 bgextend bgLRextendTrigger zoomInRotate bgLRextend">
         <div class="bgappearTrigger bgappear position-relative">
           <a href="/">
-            <img class="img-fluid" src="/images/business/business-3.jpg" alt="">
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-3.jpg" alt="">
           </a>
           <p class="position-absolute fs-5">電気工事</p>
         </div>
@@ -162,7 +150,7 @@
       <li class="col-lg col-md-6 p-0 bgextend bgLRextendTrigger zoomInRotate bgLRextend">
         <div class="bgappearTrigger bgappear position-relative">
           <a href="/">
-            <img class="img-fluid" src="/images/business/business-4.jpg" alt="">
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-4.jpg" alt="">
           </a>
           <p class="position-absolute fs-5">解体工事</p>
         </div>
@@ -226,14 +214,14 @@
           <a href="/recruit/recruit.html" class="stretchbtn "><span class="me-3">More</span></a>
         </div>
       </div>
-      <img class="img-fluid" src="/images/top/recruit.jpg" alt="">
+      <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/top/recruit.jpg" alt="">
     </div>
   </section>
 
   <!-- footer -->
   <footer id="footer" class="p-md-4 p-3">
     <div class="d-lg-flex justify-content-between my-3">
-      <img class="logo" src="/images/logo.svg" alt="">
+      <img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="">
       <ul class="d-flex flex-wrap my-4">
         <li class="mx-md-4 m-2"><a href=""><i class="fas fa-angle-right me-1"></i>ホーム</a></li>
         <li class="mx-md-4 m-2"><a href="/business/business.html"><i class="fas fa-angle-right me-1"></i>事業内容</a></li>
@@ -251,17 +239,6 @@
     <a href="#top" class="page_top"></a>
   </footer>
 
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="/scripts/typing.js"></script>
-<script src="/scripts/scrollreveal.js"></script>
-<script src="/scripts/bxslider.js"></script>
-<script src="/scripts/vegas.js"></script>
-<script src="/scripts/main.js"></script>
-
+  <?php get_footer(); ?>
 </body>
 </html>
