@@ -2,69 +2,12 @@
 <html lang="ja">
 <head>
 <?php get_header(); ?>
+
 </head>
 <body>
 
-  <header id="header" class="d-flex">
-    <h2>
-      <a href="/">
-        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="" width="85%">
-      </a>
-    </h2>
-    <nav id="pc-nav" class="">
-      <ul id="g-navi" class="nav01c">
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/business/business.html">事業内容</a></li>
-        <li><a href="/company/company.html">会社情報</a></li>
-        <li><a href="/news/news.html">ニュース</a></li>
-        <li><a href="/recruit/recruit.html">採用情報</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- mobile-menu -->
-  <div class="openbtn d-lg-none"><span></span><span></span><span></span></div>
-  <nav id="g-nav">
-    <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-      <ul>
-        <li>
-          <a href="/" class="d-flex justify-content-between align-items-center">
-            Top
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/business/business.html" class="d-flex justify-content-between align-items-center">
-            事業内容
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/company/company.html" class="d-flex justify-content-between align-items-center">
-            会社情報
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/news/news.html" class="d-flex justify-content-between align-items-center">
-            ニュース
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/recruit/recruit.html" class="d-flex justify-content-between align-items-center">
-            採用情報
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-      </ul>
-      <div class="border p-3 mt-5 mx-3 small">
-        <a href="tel:0120-123-456" class="d-block text-center"><i class="fa fa-phone me-2"></i>0120-123-456</a>
-      </div>
-      <p class="text-center my-1">月～金 09:00-17:00 (土日祝休み)</p>
-    </div>
-  </nav>
-
+<?php get_template_part('includes/c-header'); ?>      
   <!-- top_main -->
   <section class="top_main">
     <div class="top-title">
@@ -87,10 +30,11 @@
         <p class="bg-dark d-inline-block py-1 px-3">お知らせ</p>
         <!-- <p class="p-md-4 p-3"><span class="mx-md-4 mx-2 fw-bold">2021.09.01</span> Riv建設  求人募集中</p> -->
         <ul class="slider p-md-4 p-3">
-          <li class="p-3"><a href="/news/news.html"><span class="mx-md-4 mx-2 fw-bold">2021.09.01</span>Riv建設 求人募集中</a></li>
-          <li class="p-3"><a href="/news/news.html"><span class="mx-md-4 mx-2 fw-bold">2021.08.01</span>8月のお知らせ</a></li>
-          <li class="p-3"><a href="/news/news.html"><span class="mx-md-4 mx-2 fw-bold">2021.07.01</span>7月の営業時間</a></li>
-        </ul>
+          <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <li class="p-3"><a href="<?php the_permalink() ;?>"><span class="mx-md-4 mx-2 fw-bold"><?php echo get_the_date(); ?></span><?php the_title(); ?></a></li>
+          </ul>
+          <?php endwhile; ?>
+          <?php endif; ?>
       </div>
     </div>
     <div class="scrolldown"><span>Scroll</span></div>
@@ -110,7 +54,7 @@
 
       
 
-      <a href="/company/company.html" class="stretchbtn my-lg-5 my-3"><span class="me-3">More</span></a>
+      <a href=" <?php echo esc_url( home_url('/company')); ?>" class="stretchbtn my-lg-5 my-3"><span class="me-3">More</span></a>
     </div>
   </section>
 
@@ -125,7 +69,7 @@
     <ul id="gallery" class="row gallery my-5">
       <li class="col-lg col-md-6 p-0 bgextend bgLRextendTrigger zoomInRotate bgLRextend">
         <div class="bgappearTrigger bgappear position-relative">
-          <a href="/">
+          <a href=" <?php echo esc_url( home_url('/')); ?>">
             <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-1.jpg" alt="">
           </a>
           <p class="position-absolute fs-5">鉄骨工事</p>
@@ -158,7 +102,7 @@
     </ul>
 
     <div class="container">
-      <a href="/business/business.html" class="stretchbtn mb-5"><span class="me-3">More</span></a>
+      <a href=" <?php echo esc_url( home_url('/business')); ?>" class="stretchbtn mb-5"><span class="me-3">More</span></a>
     </div>
   </section>
 
@@ -170,31 +114,25 @@
           <h2 class="Typing">NEWS</h2>
           <p class="description">- ニュース</p>
           <div class="mt-auto p-2 mb-4">
-            <a href="/news/news.html" class="stretchbtn"><span class="me-3">More</span></a>
+            <a href=" <?php echo esc_url( home_url('/news')); ?>" class="stretchbtn"><span class="me-3">More</span></a>
           </div>
         </div>
       </div>
 
       <div class="col-lg-7">
         <ul class="p-md-5">
-          <li class="p-md-5 p-4 border-bottom border-white">
-            <a href="">
-              <span class="m-color text-white px-md-5 p-md-4 p-2 me-4">2021.09.01</span> Riv建設 求人募集中
-            </a>
-          </li>
-          <li class="p-md-5 p-4 border-bottom border-white">
-            <a href="">
-              <span class="m-color text-white px-md-5 p-md-4 p-2 me-4">2021.08.01</span> 8月のお知らせ
-            </a>
-          </li>
-          <li class="p-md-5 p-4 border-bottom border-white">
-            <a href="">
-              <span class="m-color text-white px-md-5 p-md-4 p-2 me-4">2021.07.01</span> 7月のお休み情報
-            </a>
-          </li>
+          <?php query_posts('posts_per_page=3'); ?>
+          <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <li class="p-md-5 p-4 border-bottom border-white">
+              <a href="<?php the_permalink() ;?>">
+                <span class="m-color text-white px-md-5 p-md-4 p-2 me-4"><?php echo get_the_date(); ?></span><?php the_title(); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+          <?php endif; ?>
         </ul>
         <div class="d-md-none my-5 text-center">
-          <a href="/news/news.html" class="stretchbtn"><span class="me-3">More</span></a>
+          <a href=" <?php echo esc_url( home_url('/news')); ?>" class="stretchbtn"><span class="me-3">More</span></a>
         </div>
       </div>
     </div>
@@ -211,34 +149,14 @@
           </p>
         </div>
         <div class="mt-auto p-2">
-          <a href="/recruit/recruit.html" class="stretchbtn "><span class="me-3">More</span></a>
+          <a href=" <?php echo esc_url( home_url('/recruit')); ?>" class="stretchbtn "><span class="me-3">More</span></a>
         </div>
       </div>
       <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/top/recruit.jpg" alt="">
     </div>
   </section>
-
   <!-- footer -->
-  <footer id="footer" class="p-md-4 p-3">
-    <div class="d-lg-flex justify-content-between my-3">
-      <img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="">
-      <ul class="d-flex flex-wrap my-4">
-        <li class="mx-md-4 m-2"><a href=""><i class="fas fa-angle-right me-1"></i>ホーム</a></li>
-        <li class="mx-md-4 m-2"><a href="/business/business.html"><i class="fas fa-angle-right me-1"></i>事業内容</a></li>
-        <li class="mx-md-4 m-2"><a href="/company/company.html"><i class="fas fa-angle-right me-1"></i>会社情報</a></li>
-        <li class="mx-md-4 m-2"><a href="/news/news.html"><i class="fas fa-angle-right me-1"></i>ニュース</a></li>
-        <li class="mx-md-4 m-2"><a href="/recruit/recruit.html"><i class="fas fa-angle-right me-1"></i>採用情報</a></li>
-      </ul>
-    </div>
-    <div class="small">
-      <p class="my-2">〒812-0011<span class="br">
-      福岡県福岡市博多区博多駅前3-27-25-9F</span></p>
-      <p>TEL：0120-123-456 <span class="br-sp ms-2">FAX：0120-123-789</span></p>
-    </div>
-    <p class="text-center small my-4">Copyright © 株式会社 Riv建設 All Rights Reserved.</p>
-    <a href="#top" class="page_top"></a>
-  </footer>
-
+  <?php get_template_part('includes/c-footer'); ?>      
   <?php get_footer(); ?>
 </body>
 </html>

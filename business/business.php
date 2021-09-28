@@ -1,3 +1,7 @@
+<?php
+ /* Template Name: business
+ */
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,76 +15,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
-<link rel="stylesheet" type="text/css" href="/styles/animation.css">
-<link rel="stylesheet" type="text/css" href="/styles/parts.css">
-<link rel="stylesheet" type="text/css" href="/styles/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/animation.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/parts.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/style.css">
 </head>
 <body>
 
   <!-- header -->
-  <header id="header" class="d-flex">
-    <h2>
-      <a href="/">
-        <img class="logo" src="/images/logo.svg" alt="" width="85%">
-      </a>
-    </h2>
-    <nav id="pc-nav" class="">
-      <ul id="g-navi" class="nav01c">
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/business/business.html">事業内容</a></li>
-        <li><a href="/company/company.html">会社情報</a></li>
-        <li><a href="/news/news.html">ニュース</a></li>
-        <li><a href="/recruit/recruit.html">採用情報</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- mobile-menu -->
-  <div class="openbtn d-lg-none"><span></span><span></span><span></span></div>
-  <nav id="g-nav">
-    <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-      <ul>
-        <li>
-          <a href="/" class="d-flex justify-content-between align-items-center">
-            Top
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/business/business.html" class="d-flex justify-content-between align-items-center">
-            事業内容
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/company/company.html" class="d-flex justify-content-between align-items-center">
-            会社情報
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/news/news.html" class="d-flex justify-content-between align-items-center">
-            ニュース
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-        <li>
-          <a href="/recruit/recruit.html" class="d-flex justify-content-between align-items-center">
-            採用情報
-            <span><i class="fas fa-chevron-right"></i></span>
-          </a>
-        </li> 
-      </ul>
-      <div class="border p-3 mt-5 mx-3 small">
-        <a href="tel:0120-123-456" class="d-block text-center"><i class="fa fa-phone me-2"></i>0120-123-456</a>
-      </div>
-      <p class="text-center my-1">月～金 09:00-17:00 (土日祝休み)</p>
-    </div>
-  </nav>
+  <?php get_template_part('includes/c-header'); ?>      
 
   <!-- top_company -->
   <section id="thumbnail" class="position-relative">
-    <img class="thumbnail-img" src="/images/business/business.jpg" alt="">
+    <img class="thumbnail-img" src="<?php echo get_template_directory_uri(); ?>/images/business/business.jpg" alt="">
     <div class="position-absolute text-center">
       <p>BUSINESS</p>
       <h2 class="Typing">事業内容</h2>
@@ -97,7 +43,7 @@
     
     <div class="row position-relative mt-4">
       <div class="bgextend bgLRextendTrigger col-lg-5 p-0">
-        <img class="bgappearTrigger img-fluid" src="/images/business/business-1.jpg" alt="">
+        <img class="bgappearTrigger img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-1.jpg" alt="">
       </div>
       <div class="scroll-top col-lg-7 p-lg-5 p-4 d-flex flex-column business-item">
         <h2 class="my-lg-5 my-4"><span class="mx-4">1</span>鉄骨工事</h2>
@@ -111,7 +57,7 @@
 
     <div class="row flex-row-reverse position-relative">
       <div class="bgextend bgLRextendTrigger col-lg-5 p-0">
-        <img class="bgappearTrigger img-fluid" src="/images/business/business-2.jpg" alt="">
+        <img class="bgappearTrigger img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-2.jpg" alt="">
       </div>
       <div class="scroll-top col-lg-7 p-lg-5 p-4 d-flex flex-column business-item">
         <h2 class="my-lg-5 my-4"><span class="mx-4">2</span>給水工事</h2>
@@ -125,7 +71,7 @@
 
     <div class="row position-relative">
       <div class="bgextend bgLRextendTrigger col-lg-5 p-0">
-        <img class="bgappearTrigger img-fluid" src="/images/business/business-3.jpg" alt="">
+        <img class="bgappearTrigger img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-3.jpg" alt="">
       </div>
       <div class="scroll-top col-lg-7 p-lg-5 p-4 d-flex flex-column business-item">
         <h2 class="my-lg-5 my-4"><span class="mx-4">3</span>電気工事</h2>
@@ -138,7 +84,7 @@
 
     <div class="row flex-row-reverse position-relative">
       <div class="bgextend bgLRextendTrigger col-lg-5 p-0">
-        <img class="bgappearTrigger img-fluid" src="/images/business/business-4.jpg" alt="">
+        <img class="bgappearTrigger img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/business/business-4.jpg" alt="">
       </div>
       <div class="scroll-top col-lg-7 p-lg-5 p-4 d-flex flex-column business-item">
         <h2 class="my-lg-5 my-4"><span class="mx-4">4</span>解体工事</h2>
@@ -156,31 +102,13 @@
 
 
   <!-- footer -->
-  <footer id="footer" class="p-md-4 p-3">
-    <div class="d-lg-flex justify-content-between my-3">
-      <img class="logo" src="/images/logo.svg" alt="">
-      <ul class="d-flex flex-wrap my-4">
-        <li class="mx-md-4 m-2"><a href=""><i class="fas fa-angle-right me-1"></i>ホーム</a></li>
-        <li class="mx-md-4 m-2"><a href="/business/business.html"><i class="fas fa-angle-right me-1"></i>事業内容</a></li>
-        <li class="mx-md-4 m-2"><a href="/company/company.html"><i class="fas fa-angle-right me-1"></i>会社情報</a></li>
-        <li class="mx-md-4 m-2"><a href="/news/news.html"><i class="fas fa-angle-right me-1"></i>ニュース</a></li>
-        <li class="mx-md-4 m-2"><a href="/recruit/recruit.html"><i class="fas fa-angle-right me-1"></i>採用情報</a></li>
-      </ul>
-    </div>
-    <div class="small">
-      <p class="my-2">〒812-0011<span class="br">
-      福岡県福岡市博多区博多駅前3-27-25-9F</span></p>
-      <p>TEL：0120-123-456 <span class="br-sp ms-2">FAX：0120-123-789</span></p>
-    </div>
-    <p class="text-center small my-4">Copyright © 株式会社 Riv建設 All Rights Reserved.</p>
-    <a href="#top" class="page_top"></a>
-  </footer>
+  <?php get_template_part('includes/c-footer'); ?>      
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="/scripts/typing.js"></script>
-<script src="/scripts/scrollreveal.js"></script>
-<script src="/scripts/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/typing.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/scrollreveal.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
 
 </body>
 </html>
