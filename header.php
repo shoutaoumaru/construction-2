@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<title>建設テンプレート2</title>
 <meta name="description"  content="">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">

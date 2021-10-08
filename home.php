@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<title>建設テンプレート2</title>
 <?php get_header(); ?>
 
 </head>
 <body>
-
-
-<?php get_template_part('includes/c-header'); ?>      
+  <?php get_template_part('includes/c-header'); ?>      
   <!-- top_main -->
   <section class="top_main">
     <div class="top-title">
@@ -155,8 +154,16 @@
       <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/images/top/recruit.jpg" alt="">
     </div>
   </section>
-  <!-- footer -->
-  <?php get_template_part('includes/c-footer'); ?>      
+
   <?php get_footer(); ?>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/typing.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/scrollreveal.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/bxslider.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/vegas.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
 </body>
 </html>
